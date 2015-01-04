@@ -117,10 +117,10 @@ int main(int argc, char *argv[])
 	int c, ret;
 	struct ether_addr ac_hwaddr;	/* Access Concentrator's MAC address */
 	struct ether_addr dev_hwaddr;	/* MAC address of interface we use */
-	char *dev_name = NULL;			/* Interface to use */
-	char *ac_name = NULL;			/* Access Concentrator's name */
-	u_char aflag = 0x00;			/* Arguments flag */
-	u_char id_prefix;				/* CHAP Identifier */
+	char *dev_name = NULL;		/* Interface to use */
+	char *ac_name = NULL;		/* Access Concentrator's name */
+	u_char aflag = 0x00;		/* Arguments flag */
+	u_char id_prefix;		/* CHAP Identifier */
 
 	pcap_t *fp;
 	char errbuf[PCAP_ERRBUF_SIZE];
@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
 	u_char code, id, val_size;
 	int len;
 
-	u_char buf[BUF_MAXLEN];				/* Buffer for MAC list */
+	u_char buf[BUF_MAXLEN];		/* Buffer for MAC list */
 	u_char rcv[MAX_STA_COUNT];
 	struct maclist *maclist = (struct maclist *) buf;
 	struct ether_addr *ea = maclist->ea;
@@ -314,7 +314,7 @@ int main(int argc, char *argv[])
 			if (code == CHAP_RESPONSE && id == id_prefix)
 			{
 				/* Most probably it is response to our challenge */
-				rcv[i]++; // pozor z jednej mac moze bezat viacero pppoe sessions (sess je definovana id a mac adresami
+				rcv[i]++; // pozor z jednej mac moze bezat viacero pppoe sessions (sess je definovana id a mac adresami)
 				GETSHORT (val_size, inp);
 				response = inp;
 				len -= (CHAP_HEADERLEN + 1 + val_size);

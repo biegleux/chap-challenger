@@ -25,13 +25,13 @@
 /* Maximum number of concurrently registered stations */
 #define MAX_STA_COUNT		2007
 /* maximum length buffer required */
-#define BUF_MAXLEN			sizeof(uint) + MAX_STA_COUNT * sizeof(struct ether_addr)
+#define BUF_MAXLEN		sizeof(uint) + MAX_STA_COUNT * sizeof(struct ether_addr)
 
 /* Ethernet frame types according to RFC 2516 */
 #define ETH_PPPOE_SESSION	0x8864
 
 /* PPPoE codes */
-#define CODE_SESS			0x00
+#define CODE_SESS		0x00
 
 /* Header size of a PPPoE packet */
 #define PPPOE_OVERHEAD		6  /* type, code, session, length */
