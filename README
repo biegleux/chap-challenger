@@ -1,0 +1,16 @@
+INFORMATION:
+------------
+
+	chap-challenger sends spoofed chap challenges to discovered clients
+
+	It can be used in wireless networks where PPPoE is used and CHAP is used as an authentication protocol.
+
+	if [-n] is not specified, chap-challenger is trying to obtain AC's name from traffic
+	if [-p] is not specified, default 0x00 is used
+
+	Copyright (c) 2008-2010 Tibor Bombiak
+
+LICENSE:
+--------
+
+	For license information read COPYING.
